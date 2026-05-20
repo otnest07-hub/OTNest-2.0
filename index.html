@@ -4,9 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>OT Nest - Occupational and Physiotherapy Centre</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
   <style>
     * {
       margin: 0;
@@ -16,78 +18,112 @@
     }
 
     body {
-      background: #f7fbff;
+      background: #f8fbff;
       color: #1e293b;
-      line-height: 1.6;
     }
 
     header {
-      background: linear-gradient(135deg, #0f172a, #2563eb);
-      color: white;
-      padding: 20px 8%;
       position: sticky;
       top: 0;
       z-index: 1000;
+      background: white;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+      padding: 16px 5%;
     }
 
-    nav {
-      display: flex;
-      justify-content: space-between;
+    .navbar {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
       align-items: center;
     }
 
-    nav h1 {
-      font-size: 28px;
-      font-weight: 700;
-    }
-
-    nav ul {
+    .menu-left {
       display: flex;
-      list-style: none;
-      gap: 25px;
+      gap: 24px;
+      align-items: center;
     }
 
-    nav ul li a {
-      color: white;
+    .menu-left a {
       text-decoration: none;
+      color: #0f172a;
       font-weight: 500;
+      transition: 0.3s;
+    }
+
+    .menu-left a:hover {
+      color: #2563eb;
+    }
+
+    .logo-center {
+      text-align: center;
+    }
+
+    .logo-center img {
+      height: 90px;
+      width: auto;
+      object-fit: contain;
+    }
+
+    .login-right {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+
+    .login-btn {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      border: none;
+      background: #2563eb;
+      color: white;
+      font-size: 20px;
+      cursor: pointer;
+      transition: 0.3s;
+      box-shadow: 0 6px 15px rgba(37,99,235,0.3);
+    }
+
+    .login-btn:hover {
+      background: #1d4ed8;
+      transform: scale(1.05);
     }
 
     .hero {
+      min-height: 90vh;
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
       align-items: center;
-      gap: 40px;
+      gap: 50px;
       padding: 80px 8%;
       background: linear-gradient(to right, #eff6ff, #ffffff);
     }
 
-    .hero-content h2 {
-      font-size: 52px;
-      margin-bottom: 20px;
+    .hero-content h1 {
+      font-size: 58px;
       color: #0f172a;
+      margin-bottom: 20px;
+      line-height: 1.1;
     }
 
     .hero-content p {
       font-size: 18px;
-      margin-bottom: 25px;
       color: #475569;
+      margin-bottom: 30px;
+      line-height: 1.8;
     }
 
     .btn-group {
       display: flex;
-      gap: 15px;
+      gap: 16px;
       flex-wrap: wrap;
     }
 
     .btn {
-      padding: 14px 28px;
-      border-radius: 12px;
-      border: none;
+      padding: 15px 30px;
+      border-radius: 14px;
       text-decoration: none;
       font-weight: 600;
-      transition: 0.3s ease;
-      cursor: pointer;
+      transition: 0.3s;
       display: inline-block;
     }
 
@@ -97,70 +133,71 @@
     }
 
     .btn-primary:hover {
-      background: #1d4ed8;
+      background: #1e40af;
     }
 
-    .btn-secondary {
+    .btn-whatsapp {
       background: #22c55e;
       color: white;
     }
 
-    .btn-secondary:hover {
+    .btn-whatsapp:hover {
       background: #16a34a;
     }
 
     .hero-image img {
       width: 100%;
-      border-radius: 24px;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+      border-radius: 30px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.12);
     }
 
     .stats {
+      padding: 70px 8%;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 20px;
-      padding: 40px 8%;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 25px;
       background: white;
     }
 
-    .stat-card {
+    .stat-box {
       background: #eff6ff;
-      padding: 30px;
-      border-radius: 20px;
+      padding: 35px;
+      border-radius: 24px;
       text-align: center;
     }
 
-    .stat-card h3 {
-      font-size: 36px;
+    .stat-box h2 {
+      font-size: 42px;
       color: #2563eb;
+      margin-bottom: 10px;
     }
 
     section {
-      padding: 80px 8%;
+      padding: 90px 8%;
     }
 
     .section-title {
       text-align: center;
-      margin-bottom: 50px;
+      margin-bottom: 60px;
     }
 
     .section-title h2 {
-      font-size: 40px;
+      font-size: 42px;
+      margin-bottom: 12px;
       color: #0f172a;
-      margin-bottom: 10px;
     }
 
     .cards {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 25px;
     }
 
     .card {
       background: white;
       border-radius: 24px;
-      padding: 30px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+      padding: 35px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.06);
       transition: 0.3s;
     }
 
@@ -169,14 +206,14 @@
     }
 
     .card h3 {
-      margin-bottom: 15px;
       color: #2563eb;
+      margin-bottom: 15px;
     }
 
-    .booking {
-      background: linear-gradient(135deg, #dbeafe, #ffffff);
-      border-radius: 30px;
+    .booking-form {
+      background: white;
       padding: 50px;
+      border-radius: 30px;
       box-shadow: 0 10px 30px rgba(0,0,0,0.08);
     }
 
@@ -184,82 +221,64 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 20px;
-      margin-top: 30px;
     }
 
     input,
     select,
     textarea {
-      padding: 15px;
-      border-radius: 12px;
+      width: 100%;
+      padding: 16px;
+      border-radius: 14px;
       border: 1px solid #cbd5e1;
       font-size: 15px;
-      width: 100%;
     }
 
     textarea {
-      min-height: 120px;
       resize: vertical;
+      min-height: 120px;
     }
 
     .full-width {
       grid-column: 1 / -1;
     }
 
-    .testimonial-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 25px;
-    }
-
-    .testimonial {
-      background: white;
-      padding: 30px;
-      border-radius: 24px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.06);
-    }
-
-    .faq-item {
-      background: white;
-      padding: 25px;
-      border-radius: 18px;
-      margin-bottom: 15px;
-      box-shadow: 0 6px 16px rgba(0,0,0,0.05);
-    }
-
     footer {
       background: #0f172a;
       color: white;
-      padding: 60px 8%;
       text-align: center;
+      padding: 50px 8%;
     }
 
     .whatsapp-float {
       position: fixed;
-      bottom: 25px;
       right: 25px;
+      bottom: 25px;
       background: #22c55e;
       color: white;
-      padding: 16px 20px;
-      border-radius: 999px;
       text-decoration: none;
+      padding: 16px 22px;
+      border-radius: 999px;
       font-weight: 600;
       box-shadow: 0 10px 20px rgba(0,0,0,0.2);
     }
 
-    @media(max-width:768px) {
-      .hero-content h2 {
-        font-size: 38px;
+    @media(max-width: 900px) {
+      .navbar {
+        grid-template-columns: 1fr;
+        gap: 20px;
       }
 
-      nav {
-        flex-direction: column;
-        gap: 15px;
-      }
-
-      nav ul {
-        flex-wrap: wrap;
+      .menu-left {
         justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      .login-right {
+        justify-content: center;
+      }
+
+      .hero-content h1 {
+        font-size: 42px;
       }
     }
   </style>
@@ -267,134 +286,169 @@
 <body>
 
 <header>
-  <nav>
-    <h1 style="display:flex; align-items:center; gap:12px;">
-      <img src="OT logo.PNG" alt="OT Nest Logo" style="height:60px; width:auto; border-radius:8px; background:white; padding:4px;" />
-      OT Nest
-    </h1>
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#booking">Book</a></li>
-      <li><a href="#testimonials">Reviews</a></li>
-      <li><a href="#faq">FAQ</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
+  <div class="navbar">
+
+    <div class="menu-left">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#booking">Book</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+    <div class="logo-center">
+      <img src="OT logo.PNG" alt="OT Nest Logo">
+    </div>
+
+    <div class="login-right">
+      <button class="login-btn">👤</button>
+    </div>
+
+  </div>
 </header>
 
-<section class="hero">
+<section class="hero" id="home">
+
   <div class="hero-content">
-    <h2>Expert Physiotherapy for Pain Relief & Recovery</h2>
+    <h1>Occupational & Physiotherapy Care That Restores Movement</h1>
+
     <p>
-      Helping patients recover from back pain, sports injuries, posture issues,
-      post-surgery rehabilitation, and mobility challenges.
+      OT Nest helps patients recover from pain, injuries, posture problems,
+      neurological conditions, sports rehabilitation, and mobility disorders
+      with personalized treatment programs.
     </p>
 
     <div class="btn-group">
       <a href="#booking" class="btn btn-primary">Book Appointment</a>
-      <a href="https://wa.me/919999999999?text=Hello%20Doctor%2C%20I%20want%20to%20book%20a%20physiotherapy%20consultation." class="btn btn-secondary">Chat on WhatsApp</a>
+
+      <a href="https://wa.me/919999999999?text=Hello%20Doctor%2C%20I%20want%20to%20book%20a%20consultation."
+         class="btn btn-whatsapp">
+         WhatsApp Consultation
+      </a>
     </div>
   </div>
 
   <div class="hero-image">
-    <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=1200&auto=format&fit=crop" alt="Physiotherapist" />
+    <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=1200&auto=format&fit=crop" alt="Clinic Image">
   </div>
+
 </section>
 
 <section class="stats">
-  <div class="stat-card">
-    <h3>8+</h3>
+
+  <div class="stat-box">
+    <h2>8+</h2>
     <p>Years Experience</p>
   </div>
 
-  <div class="stat-card">
-    <h3>5000+</h3>
-    <p>Sessions Completed</p>
+  <div class="stat-box">
+    <h2>5000+</h2>
+    <p>Therapy Sessions</p>
   </div>
 
-  <div class="stat-card">
-    <h3>4.9★</h3>
-    <p>Google Rating</p>
+  <div class="stat-box">
+    <h2>4.9★</h2>
+    <p>Patient Rating</p>
   </div>
 
-  <div class="stat-card">
-    <h3>95%</h3>
+  <div class="stat-box">
+    <h2>95%</h2>
     <p>Recovery Success</p>
   </div>
+
 </section>
 
 <section id="about">
+
   <div class="section-title">
-    <h2>About the Physiotherapist</h2>
-    <p>Trusted care with personalized treatment plans.</p>
+    <h2>About OT Nest</h2>
+    <p>Professional rehabilitation and patient-centered physiotherapy care.</p>
   </div>
 
   <div class="cards">
+
     <div class="card">
-      <h3>Qualifications</h3>
-      <p>BPT, MPT (Orthopedic Physiotherapy)</p>
+      <h3>Expert Care</h3>
+      <p>
+        Specialized physiotherapy and occupational therapy programs designed
+        for faster recovery and long-term wellness.
+      </p>
     </div>
 
     <div class="card">
-      <h3>Specializations</h3>
-      <p>Sports Rehab, Back Pain, Neck Pain, Posture Correction</p>
+      <h3>Advanced Rehabilitation</h3>
+      <p>
+        Sports injury rehabilitation, posture correction, neuro rehab,
+        pediatric therapy, and elderly care.
+      </p>
     </div>
 
     <div class="card">
-      <h3>Languages</h3>
-      <p>English, Hindi</p>
+      <h3>Patient First Approach</h3>
+      <p>
+        Personalized recovery plans with regular progress tracking and
+        therapy guidance.
+      </p>
     </div>
+
   </div>
+
 </section>
 
 <section id="services">
+
   <div class="section-title">
     <h2>Our Services</h2>
-    <p>Comprehensive rehabilitation and pain management services.</p>
+    <p>Comprehensive therapy solutions for every stage of recovery.</p>
   </div>
 
   <div class="cards">
+
     <div class="card">
-      <h3>Back Pain Treatment</h3>
-      <p>Customized therapy for chronic and acute lower back pain.</p>
+      <h3>Back Pain Therapy</h3>
+      <p>Effective treatment for chronic and acute back pain conditions.</p>
     </div>
 
     <div class="card">
       <h3>Sports Rehabilitation</h3>
-      <p>Recovery plans for athletes and sports-related injuries.</p>
+      <p>Customized sports injury recovery and performance rehab.</p>
     </div>
 
     <div class="card">
-      <h3>Post Surgery Rehab</h3>
-      <p>Mobility restoration and recovery support after surgery.</p>
+      <h3>Post Surgery Recovery</h3>
+      <p>Recovery support after orthopedic and neurological surgeries.</p>
+    </div>
+
+    <div class="card">
+      <h3>Occupational Therapy</h3>
+      <p>Helping patients regain independence in daily activities.</p>
     </div>
 
     <div class="card">
       <h3>Home Physiotherapy</h3>
-      <p>Professional physiotherapy sessions at your home.</p>
+      <p>Professional therapy sessions delivered at your home.</p>
     </div>
 
     <div class="card">
-      <h3>Posture Correction</h3>
-      <p>Assessment and treatment to improve posture and alignment.</p>
+      <h3>Pediatric Therapy</h3>
+      <p>Specialized therapy programs for children and developmental care.</p>
     </div>
 
-    <div class="card">
-      <h3>Elderly Rehabilitation</h3>
-      <p>Mobility enhancement and fall prevention programs.</p>
-    </div>
   </div>
+
 </section>
 
 <section id="booking">
-  <div class="booking">
-    <div class="section-title">
-      <h2>Book an Appointment</h2>
-      <p>Quick and easy online consultation booking.</p>
-    </div>
+
+  <div class="section-title">
+    <h2>Book Appointment</h2>
+    <p>Quick online appointment booking for consultations and therapy sessions.</p>
+  </div>
+
+  <div class="booking-form">
 
     <form>
+
       <select>
         <option>Select Consultation Type</option>
         <option>Clinic Visit</option>
@@ -404,130 +458,68 @@
 
       <select>
         <option>Select Service</option>
-        <option>Back Pain Treatment</option>
-        <option>Sports Rehab</option>
-        <option>Post Surgery Rehab</option>
+        <option>Back Pain Therapy</option>
+        <option>Sports Rehabilitation</option>
+        <option>Occupational Therapy</option>
       </select>
 
-      <input type="date" />
-      <input type="time" />
-      <input type="text" placeholder="Full Name" />
-      <input type="tel" placeholder="Phone Number" />
-      <input type="email" placeholder="Email Address" />
-      <input type="number" placeholder="Age" />
+      <input type="date">
+      <input type="time">
 
-      <select>
-        <option>Select Gender</option>
-        <option>Male</option>
-        <option>Female</option>
-        <option>Other</option>
-      </select>
+      <input type="text" placeholder="Full Name">
+      <input type="tel" placeholder="Phone Number">
 
-      <textarea class="full-width" placeholder="Describe your pain/problem"></textarea>
+      <input type="email" placeholder="Email Address">
+      <input type="number" placeholder="Age">
 
-      <input type="file" class="full-width" />
+      <textarea class="full-width" placeholder="Describe Your Problem"></textarea>
 
-      <button class="btn btn-primary full-width">Proceed to Payment</button>
+      <button class="btn btn-primary full-width">Proceed To Booking</button>
+
     </form>
-  </div>
-</section>
 
-<section id="testimonials">
-  <div class="section-title">
-    <h2>Patient Testimonials</h2>
-    <p>What our patients say about us.</p>
   </div>
 
-  <div class="testimonial-grid">
-    <div class="testimonial">
-      <p>
-        “Excellent treatment for my chronic back pain. I recovered within a few weeks.”
-      </p>
-      <strong>- Rahul Sharma</strong>
-    </div>
-
-    <div class="testimonial">
-      <p>
-        “Professional clinic with great staff and effective therapy sessions.”
-      </p>
-      <strong>- Priya Mehta</strong>
-    </div>
-
-    <div class="testimonial">
-      <p>
-        “Very helpful rehabilitation program after my knee surgery.”
-      </p>
-      <strong>- Aman Verma</strong>
-    </div>
-  </div>
-</section>
-
-<section id="faq">
-  <div class="section-title">
-    <h2>Frequently Asked Questions</h2>
-    <p>Answers to common patient questions.</p>
-  </div>
-
-  <div class="faq-item">
-    <h3>Do I need a referral?</h3>
-    <p>No, you can directly book an appointment.</p>
-  </div>
-
-  <div class="faq-item">
-    <h3>Do you provide home visits?</h3>
-    <p>Yes, home physiotherapy services are available.</p>
-  </div>
-
-  <div class="faq-item">
-    <h3>What payment methods are accepted?</h3>
-    <p>UPI, Cards, Net Banking, and Wallet payments via Razorpay.</p>
-  </div>
 </section>
 
 <section id="contact">
+
   <div class="section-title">
-    <h2>Contact & Clinic Information</h2>
-    <p>Reach out for consultations and appointments.</p>
+    <h2>Contact Us</h2>
+    <p>Reach out for appointments and rehabilitation consultations.</p>
   </div>
 
   <div class="cards">
+
     <div class="card">
       <h3>Clinic Timings</h3>
-      <p>Mon - Sat: 9:00 AM - 8:00 PM</p>
+      <p>Monday - Saturday<br>9:00 AM - 8:00 PM</p>
     </div>
 
     <div class="card">
       <h3>Phone</h3>
-      <p>+91 99999 99999</p>
+      <p>+91 75493 77608</p>
     </div>
 
     <div class="card">
       <h3>Email</h3>
-      <p>contact@physiocareclinic.com</p>
+      <p>otnest07@gmail.com.com</p>
     </div>
+
   </div>
 
-  <div style="margin-top:40px; border-radius:24px; overflow:hidden; box-shadow:0 10px 30px rgba(0,0,0,0.08);">
-    <iframe
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224345.89796617278!2d77.04417361464148!3d28.527554409350585!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d194f39b7b3f7%3A0xb1fdf0e79c0dcb8d!2sDelhi!5e0!3m2!1sen!2sin!4v1716290000000!5m2!1sen!2sin"
-      width="100%"
-      height="350"
-      style="border:0;"
-      allowfullscreen=""
-      loading="lazy">
-    </iframe>
-  </div>
 </section>
 
 <footer>
   <h2>OT Nest</h2>
-  <p>Helping patients recover with expert physiotherapy care.</p>
+  <p>Occupational and Physiotherapy Centre</p>
   <br>
   <p>© 2026 OT Nest. All Rights Reserved.</p>
 </footer>
 
-<a class="whatsapp-float" href="https://wa.me/919999999999?text=Hello%20Doctor%2C%20I%20want%20to%20book%20a%20physiotherapy%20consultation.">
-  WhatsApp Us
+<a class="whatsapp-float"
+   href="https://wa.me/919999999999?text=Hello%20Doctor%2C%20I%20want%20to%20book%20a%20consultation.">
+   WhatsApp Us
 </a>
 
 </body>
