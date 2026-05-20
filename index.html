@@ -105,7 +105,32 @@ header{
 }
 
 .logo img{
-  height:95px;
+  height:90px;
+  width:auto;
+  max-width:220px;
+  object-fit:contain;
+}
+
+.mobile-breadcrumb{
+  display:none;
+  background:white;
+  border-radius:999px;
+  padding:10px 18px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.08);
+  align-items:center;
+  gap:10px;
+  width:max-content;
+  margin:120px auto 0;
+  font-size:14px;
+  font-weight:600;
+}
+
+.mobile-breadcrumb a{
+  color:var(--primary);
+}
+
+.mobile-breadcrumb span{
+  color:var(--gray);
 }
 
 .nav-right{
@@ -495,6 +520,30 @@ justify-content:center;
 
 @media(max-width:650px){
 
+.mobile-breadcrumb{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.logo img{
+height:65px;
+max-width:160px;
+}
+
+.nav-left{
+display:none;
+}
+
+.navbar{
+grid-template-columns:1fr auto;
+padding:12px 0;
+}
+
+.nav-right{
+justify-content:flex-end;
+}
+
 .hero h1{
 font-size:42px;
 }
@@ -541,6 +590,16 @@ padding:40px 24px;
 
 </div>
 </header>
+
+<div class="mobile-breadcrumb">
+<a href="#home">Home</a>
+<span>/</span>
+<a href="#services">Specialities</a>
+<span>/</span>
+<a href="#locations">Locations</a>
+<span>/</span>
+<a href="#booking">Book</a>
+</div>
 
 <section class="hero container" id="home">
 
@@ -817,7 +876,7 @@ OT Nest combines occupational therapy, physiotherapy, rehabilitation, digital he
 </p>
 
 <div class="socials">
-<a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+<a href="https://instagram.com" target="_blank"><i class="https://www.instagram.com/otnest7"></i></a>
 <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
 <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
 <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
