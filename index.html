@@ -155,20 +155,20 @@ header{
 }
 
 .icon-btn{
-  width:48px;
-  height:48px;
+  width:46px;
+  height:46px;
   border-radius:50%;
   border:none;
-  background:var(--primary);
-  color:white;
+  background:transparent;
+  color:var(--dark);
   cursor:pointer;
   font-size:18px;
   transition:.3s;
 }
 
 .icon-btn:hover{
-  transform:translateY(-4px);
-  background:var(--secondary);
+  transform:translateY(-2px);
+  color:var(--primary);
 }
 
 .hero{
@@ -274,9 +274,9 @@ section{
 
 .stats{
   display:grid;
-  align-items:stretch;
   grid-template-columns:repeat(4,1fr);
   gap:24px;
+  overflow:hidden;
 }
 
 .stat-box{
@@ -398,6 +398,7 @@ section{
 }
 
 .testimonials{
+  overflow:hidden;
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
   gap:28px;
@@ -629,10 +630,12 @@ font-size:15px;
 
 .stats{
 display:flex;
+flex-wrap:nowrap;
 overflow-x:auto;
 gap:16px;
 padding-bottom:10px;
 scroll-snap-type:x mandatory;
+-webkit-overflow-scrolling:touch;
 }
 
 .stats::-webkit-scrollbar{
@@ -648,7 +651,22 @@ border-radius:24px;
 .locations,
 .services-grid,
 .testimonials{
+display:flex;
+flex-wrap:nowrap;
+overflow-x:auto;
 gap:18px;
+padding-bottom:10px;
+scroll-snap-type:x mandatory;
+-webkit-overflow-scrolling:touch;
+}
+
+.testimonials::-webkit-scrollbar{
+display:none;
+}
+
+.testimonial-card{
+min-width:300px;
+scroll-snap-align:start;
 }
 
 .service-card img{
@@ -732,7 +750,6 @@ padding:40px 24px;
 
 <div class="mobile-menu">
 <button><i class="fa-solid fa-bars"></i></button>
-<button><i class="fa-solid fa-magnifying-glass"></i></button>
 </div>
 
 <div class="nav-left">
@@ -759,6 +776,8 @@ padding:40px 24px;
 
 <div class="mobile-breadcrumb">
 <a href="#home">Home</a>
+<span>/</span>
+<a href="#about">About</a>
 <span>/</span>
 <a href="#services">Specialities</a>
 <span>/</span>
@@ -1046,7 +1065,7 @@ OT Nest combines occupational therapy, physiotherapy, rehabilitation, digital he
 <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
 <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
 <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
-<a href="https://wa.me/919999999999" target="_blank"><i class="fab fa-whatsapp"></i></a>
+<a href="https://wa.me/917549377608" target="_blank"><i class="fab fa-whatsapp"></i></a>
 </div>
 </div>
 
